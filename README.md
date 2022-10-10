@@ -744,11 +744,17 @@ Full example:
 
 ```ts
 const response = await fetch(url, {
-    method: 'GET',
+    method: 'POST',
+    body: JSON.stringify({
+        "external_id": IMAGE_ID,
+        "client_id": CLIENT_ID,
+        "url": INVOICE_URL,
+        "client_business_number": "== Your Client's Business Number ==",
+    }),
     headers: {
+        'Content-Type': 'application/json',
         Accept: 'application/json',
         'Authorization': token,
-        'client_business_number': "== Your Client's Business Number ==",
     },
 });
 ```
