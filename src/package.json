@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2"
+  }
+}
