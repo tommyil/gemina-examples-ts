@@ -734,23 +734,23 @@ This will help to avoid situations where the Client's Tax Id is mistakenly inter
 
 To do so, add the following line to the Dictionary (that is, to your Json):
 
-```c#
-{ "client_business_number", "== Your Client's Business Number =="},
+```ts
+'client_business_number': "== Your Client's Business Number ==",
 ```
 
 ------
 
 Full example:
 
-```c#
-var jsonData = new Dictionary<string, object>
-            {
-                { "client_id", CLIENT_ID },
-                { "external_id", invoiceId },
-                { "client_business_number", "== Your Client's Business Number =="},
-                { "file", Convert.ToBase64String(fileContent)},
-            };
-
+```ts
+const response = await fetch(url, {
+    method: 'GET',
+    headers: {
+        Accept: 'application/json',
+        'Authorization': token,
+        'client_business_number': "== Your Client's Business Number ==",
+    },
+});
 ```
 
 The `client_business_number` can be represented either by `string` or `int`.
@@ -781,7 +781,7 @@ C# Implementation - https://github.com/tommyil/gemina-examples-cs
 
 The full example code is available here:
 
-[Image / Web Image Upload](https://github.com/tommyil/gemina-examples-cs/blob/master/Program.cs)
+[Image / Web Image Upload](https://github.com/tommyil/gemina-examples-ts/blob/main/src/app.ts)
 
 
 
