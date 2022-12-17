@@ -34,6 +34,18 @@ const WEB_UPLOAD_URL = "/uploads/web";
 ```
 
 
+## Preliminary Configuration:
+```bash
+npm install -g ts-node
+npm install uuid
+npm i fs
+npm install node-fetch@2.6.7
+npm install --save-dev @types/node-fetch@2.x
+cd src
+npx ts-node app.ts
+```
+
+
 
 Next, start implementing Gemina.
 
