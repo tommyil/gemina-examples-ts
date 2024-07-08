@@ -284,6 +284,11 @@ result is:  {
 }
 Image is still being processed.Sleeping for 1 second before the next attempt.
 result is:  {
+    "assignment_number": {
+        "confidence": "high",
+        "coordinates": null,
+        "value": null
+    },
     "currency": {
         "coordinates": null,
         "value": "ils",
