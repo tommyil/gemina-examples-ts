@@ -83,6 +83,7 @@ async function uploadImage() {
         body: JSON.stringify({
             "external_id": IMAGE_ID,
             "client_id": CLIENT_ID,
+            "use_llm": true,  // <-- Optional, for LLM Support. For more details: https://github.com/tommyil/gemina-examples/blob/master/llm_integration.md
             "file": imageBase64,
         }),
         headers: {
@@ -120,6 +121,7 @@ async function uploadWebImage() {
         body: JSON.stringify({
             "external_id": IMAGE_ID,
             "client_id": CLIENT_ID,
+            "use_llm": true,  // <-- Optional, for LLM Support. For more details: https://github.com/tommyil/gemina-examples/blob/master/llm_integration.md
             "url": INVOICE_URL,
         }),
         headers: {
@@ -791,6 +793,8 @@ The `client_business_number` can be represented either by `string` or `int`.
 Response Types - https://github.com/tommyil/gemina-examples/blob/master/response_types.md
 
 Data Loop - https://github.com/tommyil/gemina-examples/blob/master/data_loop.md
+
+LLM Integration - https://github.com/tommyil/gemina-examples/blob/master/llm_integration.md
 
 Python Implementation - https://github.com/tommyil/gemina-examples
 
